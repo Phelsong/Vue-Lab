@@ -7,39 +7,33 @@ UIkit.use(Icons);
 
 <template>
   <header>
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/" uk-icon="home" class="nav-icon" />
+        <h1 id="Logo"> Josh S Wilkinson </h1>
+        <RouterLink to="/about" uk-icon="code" class="nav-icon" />
       </nav>
-    </div>
   </header>
-
-  <RouterView />
+  <RouterView id="main-body" />
 </template>
+
 
 <style>
 @import '@/assets/base.css';
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  flex-flow: column;
+  justify-content: center;
 }
 
 header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+  height: 4rem;
+  width: 100vw;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
 }
 
 a,
@@ -56,17 +50,33 @@ a,
 }
 
 nav {
-  width: 5rem;
-  height: 100vh;
-  flex-flow:column;
+  width: 100%;
+  height: 4rem;
+  flex-flow: row;
   font-size: 16px;
-  text-align: center;
-  margin-top: 2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+#Logo { 
+  width: 15rem;
+  align-items: center;
+  justify-content: center;
+}
+.nav-icon {
+  width: 4rem;
+  height: 4rem;
+  font-size: 2rem;
+  align-items: center;
+  justify-content: center;
 }
 
+#main-body{
+  height: 95%;
+  width: 100%;
+}
 
-
-@media (min-width: 1024px) {
+@media (max-width: 720px) {
   body {
     display: flex;
     place-items: center;
