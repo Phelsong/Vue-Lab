@@ -1,8 +1,9 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import UIkit from 'uikit';
-import Icons from 'uikit/dist/js/uikit-icons.min.js';
-UIkit.use(Icons);
+/* import specific icons */
+
+
+//----------------------------------------------------------------
 </script>
 
 <template>
